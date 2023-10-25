@@ -1,0 +1,38 @@
+.tooltip {
+	position: absolute;
+	z-index: 1080;
+	background-color: var(--overlay-alpha-90);
+	border-radius: 8px;
+	--T68779821: 0 2px 4px 0 var(--shadow-5);
+	-webkit-box-shadow: var(--T68779821);
+	box-shadow: 0 2px 4px 0 var(--shadow-5);
+	display: block;
+	margin-bottom: 2px;
+	margin-top: 2px;
+	max-width: 334px;
+	padding: 12px;
+	position: relative;
+	transition-property: opacity;
+	transition-duration: var(--fds-duration-extra-extra-short-in);
+	transition-timing-function: var(--fds-animation-fade-in);
+	transition: opacity .3s;
+	opacity: 0
+}
+
+.tooltip.show {
+	opacity: 1;
+}
+
+.tooltip-inner {
+	max-width: 100%;
+	min-width: 0;
+	word-break: break-word;
+	word-wrap: break-word;
+	font-family: Segoe UI Historic, Segoe UI, Helvetica, Arial, sans-serif!important;
+	display: block;
+	font-size: .75rem;
+	line-height: 1.2308;
+	font-weight: 400;
+	color: var(--primary-text2);
+	text-align: left;
+}

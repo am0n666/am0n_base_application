@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html lang="{{ site_language }}">
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}{% endblock %}</title>
+        {% block stylesheets %}{{ encore_entry_link_tags('errors_notfound') }}{% endblock %}
+    </head>
+    <body>
+		{% block content %}{% endblock %}
+    </body>
+</html>

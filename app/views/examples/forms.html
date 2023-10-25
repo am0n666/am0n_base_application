@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block navbar %}{% include('partial/navbar.html') %}{% endblock %}
+
+{% block sidebar %}{% include('partial/sidebar.html') %}{% endblock %}
+
+{% import 'partial/form.html' as form %}
+{% block content %}
+	<div class="content transparent-scrollbar">
+		{{ form_results }}
+		<hr data-content="Forms">
+		<form autocomplete="off" class="styled_form" method="post">
+			{{ form.select('option_selected', 'Select option', select_options, select_options_checked_option, {option_class: 'option'}) }}
+			{{ form.input('text', 'some_text', 'Some text', "", {label_class: 'styled_label', value_class: 'styled'}, true) }}
+			{{ form.input('date', 'some_date', 'Some date', "now"|date("Y-m-d"), {label_class: 'styled_label', value_class: 'styled'}, true) }}
+			<div class="form-group">
+				<button class="fb_button primary" type="submit" id="submit_btn">OK</button>
+				<a href="{{ default_path }}" class="fb_button secondary">Back to home</a>
+			</div>
+		</form>
+{% endblock %}

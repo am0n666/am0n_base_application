@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block title %}{{ error_title }}{% endblock %}
+
+{% block content %}
+	<div class="content transparent-scrollbar">
+		<div class="alert alert-error rectangular">
+			<div class="alert-error-icon"></div>
+			<div class="text">
+				<span class="title">Error!</span>
+				<div class="message_array">
+					<div class="line">
+						<span class="name">Type:</span>
+						<span>{{ error.type }}</span>
+					</div>
+					<div class="line">
+						<span class="name">Message:</span>
+						<span>{{ error.message }}</span>
+					</div>
+					<div class="line">
+						<span class="name">File:</span>
+						<span>{{ error.file }}</span>
+					</div>
+					<div class="line">
+						<span class="name">Line:</span>
+						<span>{{ error.line }}</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block navbar %}{% include('partial/navbar.html') %}{% endblock %}
+
+{% block content %}
+	<div class="content transparent-scrollbar">
+		<div>
+			<h1>Congratulations!</h1>
+
+			<p>This is Home Page of am0n application!</p>
+			<p>This page is located at <code>{{ page_location }}</code></p>
+		</div>
+	</div>
+{% endblock %}

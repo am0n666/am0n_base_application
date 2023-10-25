@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block navbar %}{% include('partial/navbar.html') %}{% endblock %}
+
+{% block sidebar %}{% include('partial/sidebar.html') %}{% endblock %}
+
+{% block content %}
+	<div class="content transparent-scrollbar">
+		<hr data-content="Flash Messages">
+		{{ flash_error }}
+		{{ flash_success }}
+		{{ flash_notice }}
+		{{ flash_warning }}
+	</div>
+{% endblock %}

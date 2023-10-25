@@ -1,0 +1,14 @@
+{% extends 'error_notfound.html' %}
+
+{% block title %}{{ text.page_title }}{% endblock %}
+
+{% block content %}
+	<div class="noise"></div>
+	<div class="overlay"></div>
+	<div class="terminal">
+		<h1>{{ text.main_text }} <span class="errorcode">{{ text.error_code }}</span></h1>
+		<p class="output">{{ text.line_1 }}</p>
+		<p class="output">{{ text.line_2 }} <a class="error404" href="{{ default_path }}">{{ text.homepage_link_text }}</a>.</p>
+		<p class="output">{{ text.line_3 }}</p>
+	</div>
+{% endblock %}

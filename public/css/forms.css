@@ -1,0 +1,107 @@
+form {
+	margin: 10px 0 0 0;
+	padding: 0;
+	border: 0;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	justify-content: space-between;
+	max-width: 600px;
+	padding: 10px;
+}
+
+form > * {
+	padding: 5px 0 5px 0;
+}
+
+.styled_form {
+	background-color: var(--card-background-flat);
+	border: 1px solid var(--checkbox-border);
+	border-radius: 8px;
+}
+
+.form-group {
+	box-sizing: border-box;
+	padding: 0 0 6px 0;
+	border: 0;
+	display: flex;
+	flex-direction: row;
+	position: relative;
+	justify-content: space-between;
+	align-items: center;
+	align-content: stretch;
+}
+.form-group:not(.form-group:last-of-type) {
+	margin: 0 0 5px 0;
+}
+
+.form-group:last-of-type {
+	margin: 0;
+}
+
+.form-group>*:not(label) {
+	width: 70%;
+	min-height: 36px;
+}
+
+.form-group > .fb-dropdown {
+	width: 100%;
+}
+
+.form-group > label {
+	width: 30%;
+}
+
+.styled[type=date]::-webkit-calendar-picker-indicator {
+	filter: var(--input-date-icon-color);
+}
+
+.styled[type=date],
+.styled[type=number],
+.styled[type=text],
+.styled[type=email],
+.styled[type=url] {
+	padding: .5rem;
+	background-color:  var(--input-background);
+	border: var(--input-border-width) solid var(--input-border-color);
+	border-radius:  var(--input-corner-radius);
+	display:  flex;
+	flex-direction:  row;
+	overflow:  hidden;
+	position:  relative;
+	z-index:  0;
+	cursor:  text;
+	outline:  none;
+	color:  var(--primary-text);
+	font-size:  1rem!important;
+	font-weight:  normal;
+	line-height:  1.25;
+	-webkit-appearance:  textfield;
+	-webkit-tap-highlight-color:  transparent;
+	touch-action:  manipulation;
+
+}
+
+.styled[type=date]:hover,
+.styled[type=number]:hover,
+.styled[type=text]:hover,
+.styled[type=email]:hover,
+.styled[type=url]:hover {
+	border: var(--input-border-width) solid var(--input-border-color-hover);
+}
+
+.styled[type=date]:focus,
+.styled[type=number]:focus,
+.styled[type=text]:focus,
+.styled[type=email]:focus,
+.styled[type=url]:focus {
+	border: var(--input-border-width) solid var(--input-border-color-focus);
+}
+
+.styled_label {
+	font-weight: 600;
+	font-size: .9rem;
+	display: block;
+	margin: .5rem 0;
+}
+

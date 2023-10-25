@@ -1,0 +1,96 @@
+.navbar {
+	min-height: var(--navBar-height);
+	max-height: var(--navBar-height);
+	height: 100%;
+	width: 100%;
+	background-color: var(--nav-bar-background);
+	border-bottom: 1px solid var(--wash);
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	padding: 0 20px;
+	z-index: auto;
+}
+
+.navbar_title {
+	word-break: break-word;
+	word-wrap: break-word;
+	font-size: 1.25rem;
+	font-weight: 700;
+	flex-shrink: 0;
+	color: var(--primary-text);
+	text-align: center;
+	cursor: default;
+}
+
+.navbar_link {
+	cursor: pointer;
+	-webkit-tap-highlight-color: transparent;
+	-webkit-text-size-adjust: 100%;
+	text-rendering: optimizeSpeed;
+	font-weight: 500;
+	-webkit-box-direction: normal;
+	margin: 0;
+	vertical-align: baseline;
+	touch-action: manipulation;
+	outline: 0!important;
+	display: flex;
+	-webkit-box-align: center;
+	align-items: center;
+	position: relative;
+	max-height: calc(var(--navBar-height) - 4px);
+	height: 100%;
+	line-height: 52px;
+	padding: 0 16px;
+	background-color: transparent;
+	color: var(--navbar-link-text);
+	text-decoration: none;
+	font-size: 14px;
+	flex-shrink: 0;
+	border: none;
+	-webkit-box-pack: center;
+	justify-content: center;
+	border-radius: 4px;
+}
+
+.navbar_link.active,
+.navbar_link.active:hover {
+	background-color: transparent;
+	color: var(--navbar-link-text-active);
+}
+
+.navbar_link:hover {
+	background-color: var(--navbar-link-background-hover);
+	border-radius: 4px;
+}
+
+.navbar_link[disabled]:hover,
+.navbar_link[disabled]:focus,
+.navbar_link[disabled] {
+	background-color: transparent;
+}
+
+.navbar_link.active>div {
+	direction: ltr;
+	font-size: 12px;
+	-webkit-font-smoothing: antialiased;
+	visibility: visible;
+	line-height: 0;
+	text-align: inherit;
+	color: inherit;
+	-webkit-tap-highlight-color: transparent;
+	cursor: pointer;
+	user-select: none;
+	list-style: none;
+	position: absolute;
+	border-top-right-radius: 1px;
+	border-top-left-radius: 1px;
+	border-bottom-right-radius: 0;
+	border-bottom-left-radius: 0;
+	left: 0;
+	bottom: -1px;
+	right: 0;
+	height: 3px;
+	font-family: inherit;
+	background-color: var(--navbar-link-text-active);
+}

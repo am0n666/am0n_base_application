@@ -1,0 +1,45 @@
+{% macro input(type, name, label, value, options = [], isRequired) %}
+{% set type = type|default('text') %}
+{% set isRequired = isRequired|default(false) %}
+{% if isRequired == true %}
+	{% set _required = ' required' %}
+{% else %}
+	{% set _required = '' %}
+{% endif %}
+{% if type == 'number' %}
+    <div class="form-group">
+		<label class="{{ options.label_class }}" for="{{ name }}">{{ label }}</label>
+        <input value="{{ value }}" type="{{ type }}" class="{{ options.value_class }}" id="{{ name }}" name="{{ name }}" min="{{ options.min }}" max="{{ options.max }}"{{ _required }}>
+    </div>
+{% else %}
+    <div class="form-group">
+		<label class="{{ options.label_class }}" for="{{ name }}">{{ label }}</label>
+        <input value="{{ value }}" type="{{ type }}" class="{{ options.value_class }}" id="{{ name }}" name="{{ name }}"{{ _required }}>
+    </div>
+{% endif %}
+{% endmacro %}
+{% macro select(name, label, items, selected_item, options = [], auto_submit) %}
+{% set auto_submit = auto_submit|default(false) %}
+{% if auto_submit == true %}
+	{% set _auto_submit = ' onclick="document.getElementById(\'submit_btn\').click()"' %}
+{% else %}
+	{% set _auto_submit = '' %}
+{% endif %}
+    <div class="form-group">
+		<div class="fb-dropdown" data-default-value="{{ selected_item.value }}">
+			<div class="main">
+				<span class="title">{{ label }}</span>
+				<span class="value">{{ selected_item.name }}</span>
+				<div class="arrow"></div>
+			</div>
+			<div class="fb-options">
+				{% for item in items %}
+				<div class="{{ options.option_class }}"{{ _auto_submit }}>
+					<label for="{{ item.id }}">{{ item.name }}</label>
+					<input value="{{ item.value }}" type="radio" name="{{ name }}" id="{{ item.id }}">
+				</div>
+				{% endfor %}
+			</div>
+		</div>
+    </div>
+{% endmacro %}

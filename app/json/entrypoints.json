@@ -1,0 +1,41 @@
+{
+  "entrypoints": {
+    "app": {
+      "js": [
+		"js/jquery-3.2.1.slim.min.js",
+		"js/bs5.bundle.js",
+		"js/fb-dropdown.js",
+		"js/link_disabling_fix.js",
+		"js/themeSwitcher.js",
+		"js/fb_tooltip.js",
+		"js/refresh_confirm_dlg_disabler.js"
+      ],
+      "css": [
+		"css/code.css",
+		"css/fb_buttons.css",
+		"css/fb_tooltip.css",
+		"css/fb-dropdown.css",
+		"css/flash-messages.css",
+		"css/fonts.css",
+		"css/forms.css",
+		"css/hr_with_text.css",
+		"css/navbar.css",
+		"css/normalize.css",
+		"css/plant.css",
+		"css/progress.css",
+		"css/sidebar.css",
+		"css/sun_moon.css",
+		"css/template.css",
+		"css/transparent-scrollbar.css",
+		"css/variables.css"
+      ]
+    },
+    "errors_notfound": {
+      "css": [
+		"css/fonts.css",
+		"css/other.css",
+		"css/error_404.css"
+      ]
+    }
+  }
+}

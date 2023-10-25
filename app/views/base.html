@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="{{ site_language }}" data-theme>
+    <head>
+        <meta charset="UTF-8">
+		<link rel="icon" type="image/x-icon" href="{{ public_dir('img/logo.png') }}">
+        <title>{% block title %}{{ current.titles.application }}{% endblock %}</title>
+        {% block stylesheets %}{{ encore_entry_link_tags('app') }}{% endblock %}
+    </head>
+    <body class="font_segoe font_weight_normal font_size_16">
+		<div class="app">
+			{% block navbar %}{% endblock %}
+			<div class="wrapper">
+				{% block errors %}{% endblock %}
+				{% block sidebar %}{% endblock %}
+				{% block content %}{% endblock %}
+			</div>
+		</div>
+        {% block javascripts %}{{ encore_entry_script_tags('app') }}{% endblock %}
+    </body>
+</html>

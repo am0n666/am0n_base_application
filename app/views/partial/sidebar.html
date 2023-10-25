@@ -1,0 +1,16 @@
+				<div class="sidebar transparent-scrollbar">
+				{% for sidebar_link in routes %}
+					{% if sidebar_link.titles.sidebar %}		
+						{% if current.active.sidebar == sidebar_link.active.sidebar %}
+							{% set sidebar_active_class = ' active' %}
+						{% else %}
+							{% set sidebar_active_class = '' %}
+						{% endif %}
+					<a href="{{ base_uri }}{{ sidebar_link.url }}" class="sidebar_link{{ sidebar_active_class }}">
+						<img src="{{ public_dir('img/icons/') }}{{ sidebar_link.name }}.png" class="png" alt=""/>
+						<div class="title">{{ sidebar_link.titles.sidebar }}</div>
+					</a>
+					{% endif %}
+				{% endfor %}
+				</div>
+
